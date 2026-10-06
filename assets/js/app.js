@@ -195,6 +195,7 @@ function createNewMovie(eve) {
             cardContainer.prepend(col)
             clearForm()
             hideForm()
+             showSnackBar("Added!", "Movie Added successfully", "success")
         })
         .catch(err => {
             showSnackBar("Error", err, "error")
