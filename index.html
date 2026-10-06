@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Jio Hotstar</title>
+</head>
+
+<body>
+
+    <div class="background">
+        <img src="./assets/images/background.png" alt="">
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-2">
+                <img id="logo" src="./assets/images/samebackroundlogo.png" alt="">
+            </div>
+            <div class="col-2 offset-8">
+                <button id="addBtnMain" class="btn btn-danger shadow">Add Movie</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row mt-5" id = "cardContainer">
+            <!-- <div class="col-2">
+                <h3>Iron-man</h3>
+                <div class="card resultCard">
+
+                    <figure>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCythtaM-iOKWi0JUUiQtcC3CH8o9bhUDiaFY53ZRWXFa4mGuVRFevtTZlWDusVoP6dl3e&s=10"
+                            class="img-fluid rounded-4" alt="">
+
+                        <figcaption>
+                            <h4>Iron-man</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas corporis doloremque
+                                suscipit ratione consectetur, iste nihil ex maiores consequatur veniam nobis temporibus
+                                quasi dolore in voluptates pariatur? Maiores, totam? Modi.</p>
+                        </figcaption>
+
+
+                    </figure>
+                    <div class="row cardRow">
+                        <div class="col-3 buttons">
+                            <i class="fa-solid fa-pen-to-square text-primary ml-2"></i>
+                        </div>
+                        <div class="col-3 offset-10 buttons">
+                            <i class="fa-solid fa-trash text-danger"></i>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+     <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3" id="formColumn">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 id="formTitle" class="text-center">Add Movie</h4>
+                        <i role="button" class="fa-solid fa-xmark" id="crossMark"></i>
+                    </div>
+                    <div class="card-body">
+                        <form id="form">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="title"><b>Title</b></label>
+                                    <input id="title" class="form-control mb-4" type="text"
+                                        placeholder="Enter Movie Name">
+                                </div>
+                                <div class="col-6">
+                                    <label for="type"><b>Type</b></label>
+                                    <input list="movieTypes" class="form-control mb-4" type="text" id="type"
+                                        placeholder="Serch movie type...">
+                                    <datalist id="movieTypes">
+                                        <option value="Action">
+                                        <option value="Adventure">
+                                        <option value="Animation">
+                                        <option value="Comedy">
+                                        <option value="Crime">
+                                        <option value="Drama">
+                                        <option value="Horror">
+                                        <option value="Thriller">
+                                        <option value="Mystery">
+                                        <option value="Romance">
+                                        <option value="Sci-Fi">
+                                        <option value="Fantasy">
+                                        <option value="Historical">
+                                        <option value="War">
+                                        <option value="Western">
+                                        <option value="Documentary">
+                                        <option value="Musical">
+                                        <option value="Biography">
+                                        <option value="Sports">
+                                        <option value="Family">
+                                        <option value="Psychological">
+                                        <option value="Superhero">
+                                        <option value="Supernatural">
+                                        <option value="Disaster">
+                                        <option value="Martial Arts">
+                                        <option value="Detective">
+                                        <option value="Political">
+                                        <option value="Legal / Courtroom">
+                                        <option value="Survival">
+                                        <option value="Coming-of-Age">
+                                        <option value="Dark Comedy">
+                                        <option value="Romantic Comedy">
+                                        <option value="Action Comedy">
+                                        <option value="Crime Thriller">
+                                        <option value="Psychological Thriller">
+                                        <option value="Horror Comedy">
+                                        <option value="Historical Drama">
+                                        <option value="Fantasy Adventure">
+                                        <option value="Mystery Thriller">
+                                        <option value="Satire">
+                                    </datalist>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="poster"><b>Poster</b></label>
+                                    <input id="poster" class="form-control mb-4" type="text"
+                                        placeholder="Movie Photo Link">
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="description"><b>Description</b></label>
+                                    <input id="description" class="form-control mb-4" type="text"
+                                        placeholder="description">
+                                </div>
+
+                                <div class="col-6">
+                                    <label for="date"><b>Date</b>(Movie Launch Date)</label>
+                                    <input id="date" class="form-control mb-4" type="date"
+                                        placeholder="Select launch date">
+                                </div>
+                                <div class="col-6">
+                                    <label for="rating"><b>Rating</b></label>
+                                    <select id="rating" class="form-control mb-4" name="" id="">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <button id="addBtn" class="btn btn-primary"><b>Add</b></button>
+                                            <button id="updateBtn" type="button"
+                                                class="btn btn-primary d-none"><b>Update</b></button>
+                                        </div>
+                                        <div>
+                                            <button id="clearBtn" type="button"
+                                                class="btn btn-danger"><b>Clear</b></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div id="spinner" class="d-none">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

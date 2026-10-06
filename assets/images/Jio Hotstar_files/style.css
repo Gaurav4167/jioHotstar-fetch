@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background{
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+}
+.background img{
+    object-fit: cover;
+    inset: 0;
+   
+    filter: blur(2px);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
